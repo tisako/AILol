@@ -3,8 +3,8 @@ from unittest import TestCase
 
 from testfixtures import TempDirectory
 
-from ai_lol.reader_writer.NumpyArrayWriter import NumpyArrayWriter
-from ai_lol.reader_writer.NumpyArrayReader import NumpyArrayReader
+from src.reader_writer.NumpyArrayWriter import NumpyArrayWriter
+from src.reader_writer.NumpyArrayReader import NumpyArrayReader
 
 
 class TestNumpyArrayReader(TestCase):

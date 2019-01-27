@@ -4,7 +4,7 @@ from unittest import TestCase
 
 from testfixtures import TempDirectory
 
-from ai_lol.reader_writer.NumpyArrayWriter import NumpyArrayWriter
+from src.reader_writer.NumpyArrayWriter import NumpyArrayWriter
 
 
 class TestNumpyArrayWriter(TestCase):

@@ -1,8 +1,7 @@
-from ai_lol.input_capture import GrabScreenByRatios
 import cv2
 import time
 
-from ai_lol.input_capture.ScreenCapture import ScreenCapture
+from src.input_capture.ScreenCapture import ScreenCapture
 
 last_time = time.time()
 stopTime = time.time()

@@ -4,3 +4,4 @@ Repository for a project with the ultimate aim to have an AI playing league of l
 
 #### Funtions to Remember
 - pip freeze > requirements.txt
+- pytest --cov=ai_lol tests/
