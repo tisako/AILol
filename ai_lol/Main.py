@@ -1,4 +1,4 @@
-import GrabScreenByRatios
+from ai_lol.input_capture import GrabScreenByRatios
 import cv2
 import time
 
