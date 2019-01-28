@@ -1,8 +1,8 @@
-import inspect
 import time
 from unittest import TestCase
 
 import numpy as np
+import numpy.testing as npt
 
 from src.input_capture.ScreenCapture import ScreenCapture
 from tests import FileHelper
@@ -19,4 +19,4 @@ class TestScreenCapture(TestCase):
     def test_capture_center_of_shown_screen(self):
         test_img = np.load(self.current_dir + '/TestDataScreenCapture.npy')
         input_image = self.capture.get_screen_image(0.4, 0.6, 0.4, 0.6)
-        self.assertFalse((np.array(input_image) - test_img).any(), 'An element is different in input ' + input_image.__str__() + ' and output' + test_img.__str__())
+        npt.assert_array_equal([input_image], test_img)

@@ -1,10 +1,10 @@
-import numpy as np
 from unittest import TestCase
 
+import numpy.testing as npt
 from testfixtures import TempDirectory
 
-from src.reader_writer.NumpyArrayWriter import NumpyArrayWriter
 from src.reader_writer.NumpyArrayReader import NumpyArrayReader
+from src.reader_writer.NumpyArrayWriter import NumpyArrayWriter
 
 
 class TestNumpyArrayReader(TestCase):
@@ -26,7 +26,7 @@ class TestNumpyArrayReader(TestCase):
     def test_read(self):
         data = self.reader.load_data()
 
-        self.assertFalse((np.array([self.input_array])-data).any(), 'An element is different in input ' + [self.input_array].__str__() + ' and output' + data.__str__())
+        npt.assert_array_equal([self.input_array], data)
 
     def test_read_multiple_lines(self):
         second_input = [123, 4, 5, 6]
@@ -34,7 +34,7 @@ class TestNumpyArrayReader(TestCase):
 
         data = self.reader.load_data()
 
-        self.assertFalse((np.array([self.input_array, second_input])-data).any(), 'An element is different in input ' + [self.input_array, second_input].__str__() + ' and output' + data.__str__())
+        npt.assert_array_equal([self.input_array, second_input], data)
 
     def test_read_one_line_multiple_times(self):
         second_input = [123, 4, 5, 6]
@@ -42,11 +42,11 @@ class TestNumpyArrayReader(TestCase):
 
         data = self.reader.load_data(nr_of_lines=1)
 
-        self.assertFalse((np.array([self.input_array])-data).any(), 'An element is different in input ' + [self.input_array].__str__() + ' and output' + data.__str__())
+        npt.assert_array_equal([self.input_array], data)
 
         data = self.reader.load_data(nr_of_lines=1)
 
-        self.assertFalse((np.array([second_input])-data).any(), 'An element is different in input ' + [second_input].__str__() + ' and output' + data.__str__())
+        npt.assert_array_equal([second_input], data)
 
         data = self.reader.load_data(nr_of_lines=1)
 

@@ -1,7 +1,8 @@
-import numpy as np
 from pathlib import Path
 from unittest import TestCase
 
+import numpy as np
+import numpy.testing as npt
 from testfixtures import TempDirectory
 
 from src.reader_writer.NumpyArrayWriter import NumpyArrayWriter
@@ -26,7 +27,7 @@ class TestNumpyArrayWriter(TestCase):
         NumpyArrayWriter.save_data(self.file_path, input_array)
 
         data = np.load(self.file_path)
-        self.assertFalse((np.array([input_array]) - data).any(), 'An element is different in input ' + [input_array].__str__() + ' and output' + data.__str__())
+        npt.assert_array_equal([input_array], data)
 
     def test_save_multiple_data_points(self):
         input_array = [1, 2, 3, 4]
@@ -36,10 +37,11 @@ class TestNumpyArrayWriter(TestCase):
         NumpyArrayWriter.save_data(self.file_path, second_input)
 
         data = np.load(self.file_path)
-        self.assertFalse((np.array([input_array]) - data).any(), 'An element is different in input ' + [input_array].__str__() + ' and output' + data.__str__())
+        npt.assert_array_equal([input_array], data)
 
         second_data = np.load(self.file_path)
-        self.assertFalse((np.array([input_array]) - second_data).any(), 'An element is different in input ' + [input_array].__str__() + ' and output' + second_data.__str__())
+        npt.assert_array_equal([input_array], second_data)
+
 
     def tearDown(self):
         self.d.cleanup()
