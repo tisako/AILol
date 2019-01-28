@@ -1,15 +1,19 @@
+import inspect
 import time
 from unittest import TestCase
 
 import numpy as np
 
 from src.input_capture.ScreenCapture import ScreenCapture
+from tests import FileHelper
 
 
 class TestScreenCapture(TestCase):
     def setUp(self):
+
+        current_dir = FileHelper.get_current_dir(inspect.currentframe())
         self.capture = ScreenCapture()
-        self.capture.show_screen_capture(np.load('ImageToShowScreenCapture.npy')[0])
+        self.capture.show_screen_capture(np.load(current_dir + '/ImageToShowScreenCapture.npy')[0])
         time.sleep(0.5)
 
     def test_capture_center_of_shown_screen(self):
