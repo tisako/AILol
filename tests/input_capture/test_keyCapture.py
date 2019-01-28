@@ -77,7 +77,7 @@ class TestKeyCapture(TestCase):
 
         captured_keys = capture.capture_keys()
 
-        npt.testing.assert_array_equal(captured_keys, [1.], 'Space was not captured')
+        npt.assert_array_equal(captured_keys, [1.], 'Space was not captured')
 
     def test_capture_only_space(self):
         capture = KeyCapture(['space', 'a'])
