@@ -11,7 +11,7 @@ from tests import FileHelper
 class TestScreenCapture(TestCase):
     def setUp(self):
 
-        self.current_dir = FileHelper.get_current_dir(inspect.currentframe())
+        self.current_dir = FileHelper.get_current_dir()
         self.capture = ScreenCapture()
         self.capture.show_screen_capture(np.load(self.current_dir + '/ImageToShowScreenCapture.npy')[0])
         time.sleep(0.5)
