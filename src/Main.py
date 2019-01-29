@@ -7,7 +7,7 @@ from src.frontend.TrainDataCollector import TrainDataCollector
 from src.input_capture.ScreenCapture import ScreenCapture
 
 root = Tk()
-root.geometry("300x400")
+root.geometry("500x500")
 app = TrainDataCollector(root)
 
 root.mainloop()

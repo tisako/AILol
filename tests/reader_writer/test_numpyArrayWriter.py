@@ -42,6 +42,5 @@ class TestNumpyArrayWriter(TestCase):
         second_data = np.load(self.file_path)
         npt.assert_array_equal([input_array], second_data)
 
-
     def tearDown(self):
         self.d.cleanup()
