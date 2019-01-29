@@ -2,3 +2,5 @@ venv
 .idea
 .coverage
 htmlcov
+dist
+build
