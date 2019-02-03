@@ -1,8 +1,8 @@
-from pathlib import Path
 from unittest import TestCase
 
 import numpy as np
 import numpy.testing as npt
+from pathlib import Path
 from testfixtures import TempDirectory
 
 from src.reader_writer.NumpyArrayWriter import NumpyArrayWriter
