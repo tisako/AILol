@@ -16,6 +16,7 @@ pluggy==0.8.1
 py==1.7.0
 PyInstaller==3.4
 pynput==1.4
+pyscreenshot==0.5.1
 pytest==4.1.1
 pytest-cov==2.6.1
 pywin32-ctypes==0.2.0
