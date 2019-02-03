@@ -1,8 +1,7 @@
-import win32api
+import cv2
 from tkinter import Frame, Entry, Label, W, E, S, N, Button, Canvas
 
 from PIL import Image, ImageTk
-from cv2 import cv2
 
 from src.input_capture.ScreenCapture import ScreenCapture
 
@@ -15,9 +14,9 @@ class PictureCaptureFrame(Frame):
         self.x_position_value = x_position_value
         self.x_position_value.set(0)
         self.y_size_value = y_size_value
-        self.y_size_value.set(win32api.GetSystemMetrics(1))
+        self.y_size_value.set(ScreenCapture.get_screen_height())
         self.x_size_value = x_size_value
-        self.x_size_value.set(win32api.GetSystemMetrics(0))
+        self.x_size_value.set(ScreenCapture.get_screen_width())
         self.img = None
         self.image = None
         self.canvas = None
