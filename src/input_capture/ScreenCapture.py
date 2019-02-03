@@ -4,7 +4,7 @@ import cv2
 import tkinter as tk
 
 import numpy as np
-if sys.platform == 'linux2 (*)':
+if sys.platform != 'win32':
     import pyscreenshot as ImageGrab
 else:
     from PIL import ImageGrab
