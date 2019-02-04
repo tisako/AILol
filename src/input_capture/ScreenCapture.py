@@ -18,15 +18,19 @@ class ScreenCapture:
 
     @staticmethod
     def get_screen_width():
-        print('hoi')
-        root = tk.Tk()
-        return root.winfo_screenwidth()
+        try:
+            root = tk.Tk()
+            return root.winfo_screenwidth()
+        except:
+            return 1920
 
     @staticmethod
     def get_screen_height():
-        root = tk.Tk()
-
-        return root.winfo_screenheight()
+        try:
+            root = tk.Tk()
+            return root.winfo_screenheight()
+        except:
+            return 1080
 
     def __init__(self):
         self.width = self.get_screen_width()
@@ -34,7 +38,6 @@ class ScreenCapture:
 
     def get_screen_image_relative(self, start_width_proportion=0, end_width_proportion=1, start_height_proportion=0, end_height_proportion=1):
         grab = ImageGrab.grab(bbox=(self.width * start_width_proportion, self.height * start_height_proportion, self.width * end_width_proportion, self.height * end_height_proportion))
-        print('hoi')
         return np.array(grab)
 
     def get_screen_image(self, position=(0, 0), size=(get_screen_width.__func__(), get_screen_height.__func__())):
