@@ -5,9 +5,11 @@ import cv2
 import numpy as np
 import screeninfo as screeninfo
 
-if sys.platform != 'win32':
+if sys.platform != 'win32':  # pragma: no cover
+    # This import was only included for CI
     import pyscreenshot as ImageGrab
-else:
+else:  # pragma: no cover
+    # This import will not be covered by the CI
     from PIL import ImageGrab
 
 

@@ -1,12 +1,11 @@
-import cv2
 import sys
 from unittest import TestCase
 
-import numpy as np
+import cv2
 import numpy.testing as npt
 from testfixtures import mock
 
-from src.input_capture.ScreenCapture import ScreenCapture
+from src.input_capture.screen_capture import ScreenCapture
 
 
 class TestScreenCapture(TestCase):

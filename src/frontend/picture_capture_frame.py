@@ -3,7 +3,7 @@ from tkinter import Frame, Entry, Label, W, E, S, N, Button, Canvas
 
 from PIL import Image, ImageTk
 
-from src.input_capture.ScreenCapture import ScreenCapture
+from src.input_capture.screen_capture import ScreenCapture
 
 
 class PictureCaptureFrame(Frame):

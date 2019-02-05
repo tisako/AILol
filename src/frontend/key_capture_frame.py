@@ -4,7 +4,7 @@ from tkinter import Frame, Entry, Label, StringVar, Button, DISABLED, W, E, S, N
 
 import numpy as np
 
-from src.input_capture.KeyCapture import KeyCapture
+from src.input_capture.key_capture import KeyCapture
 
 
 class KeyCaptureFrame(Frame):

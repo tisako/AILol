@@ -1,7 +1,7 @@
 from tkinter import Frame, BOTH, Button, filedialog, N, S, E, W, DoubleVar, StringVar, Label
 
-from src.frontend.KeyCaptureFrame import KeyCaptureFrame
-from src.frontend.PictureCaptureFrame import PictureCaptureFrame
+from src.frontend.key_capture_frame import KeyCaptureFrame
+from src.frontend.picture_capture_frame import PictureCaptureFrame
 
 
 class TrainDataCollector(Frame):

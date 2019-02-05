@@ -3,8 +3,8 @@ from unittest import TestCase
 import numpy.testing as npt
 from testfixtures import TempDirectory
 
-from src.reader_writer.NumpyArrayReader import NumpyArrayReader
-from src.reader_writer.NumpyArrayWriter import NumpyArrayWriter
+from src.reader_writer.numpy_array_reader import NumpyArrayReader
+from src.reader_writer.numpy_array_writer import NumpyArrayWriter
 
 
 class TestNumpyArrayReader(TestCase):

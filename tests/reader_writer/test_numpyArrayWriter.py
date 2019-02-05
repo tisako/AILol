@@ -5,7 +5,7 @@ import numpy.testing as npt
 from pathlib import Path
 from testfixtures import TempDirectory
 
-from src.reader_writer.NumpyArrayWriter import NumpyArrayWriter
+from src.reader_writer.numpy_array_writer import NumpyArrayWriter
 
 
 class TestNumpyArrayWriter(TestCase):

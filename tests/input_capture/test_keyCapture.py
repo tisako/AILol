@@ -4,7 +4,7 @@ import keyboard
 import numpy.testing as npt
 from keyboard import KeyboardEvent, KEY_DOWN, KEY_UP
 
-from src.input_capture.KeyCapture import KeyCapture
+from src.input_capture.key_capture import KeyCapture
 
 # code needed to mock keyboard data input
 dummy_keys = {
