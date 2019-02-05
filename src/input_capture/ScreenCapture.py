@@ -1,9 +1,10 @@
 import sys
 
 import cv2
-import tkinter as tk
 
 import numpy as np
+import screeninfo as screeninfo
+
 if sys.platform != 'win32':
     import pyscreenshot as ImageGrab
 else:
@@ -18,19 +19,11 @@ class ScreenCapture:
 
     @staticmethod
     def get_screen_width():
-        try:
-            root = tk.Tk()
-            return root.winfo_screenwidth()
-        except:
-            return 1920
+        return screeninfo.get_monitors()[0].width
 
     @staticmethod
     def get_screen_height():
-        try:
-            root = tk.Tk()
-            return root.winfo_screenheight()
-        except:
-            return 1080
+        return screeninfo.get_monitors()[0].height
 
     def __init__(self):
         self.width = self.get_screen_width()
