@@ -34,6 +34,7 @@ class ScreenCapture:
         return np.array(grab)
 
     def get_screen_image(self, position, size):
+        print(position)
         if position[0]+size[0] > self.width or position[1]+size[1] > self.height:
             raise ValueError('total width or heigth is bigger than screensize ' + repr(self.width) + 'x' + repr(self.height))
         return np.array(ImageGrab.grab(bbox=(position[0], position[1], position[0] + size[0], position[1] + size[1])))
