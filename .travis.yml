@@ -1,3 +1,6 @@
+branches:
+  only:
+  - master
 os: windows
 language: sh
 python: "3.7"
