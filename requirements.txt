@@ -14,7 +14,7 @@ pefile==2018.8.8
 Pillow==5.4.0
 pluggy==0.8.1
 py==1.7.0
-PyInstaller==3.4
+pyinstaller==3.4
 pynput==1.4
 pyscreenshot==0.5.1
 pytest==4.1.1
