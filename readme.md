@@ -7,4 +7,4 @@ Repository for a project with the ultimate aim to have an AI playing league of l
 - pytest --cov=src tests/ #show a coverage report in the terminal
 - pytest --cov-report html --cov=src tests/ #create a extensive html coverage report
 
-- pyinstaller -w --onefile src/Main.py #build an exe of the main.py
+- pyinstaller -w --onefile src/main.py #build an exe of the main.py
