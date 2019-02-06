@@ -8,4 +8,11 @@ install:
   - pip -V
   - pip install -r requirements.txt
 script:
-  - pytest tests/
+  - pyinstaller -w --onefile src/main.py
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: "dist/main.exe"
+  skip_cleanup: true
+  on:
+    tags: true
