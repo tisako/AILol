@@ -12,7 +12,7 @@ deploy:
 
   provider: releases
   api_key: "2cc0e3ed0bf86f647b3e29bda2f4d24e3f2e472b"
-  file: "C:\Users\travis\build\tisako\AILol\dist\main.exe"
+  file: "C:/\Users/\travis/\build/\tisako/\AILol/\dist/\main.exe"
   skip_cleanup: true
   on:
     tags: true
