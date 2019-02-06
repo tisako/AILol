@@ -10,8 +10,8 @@ script:
   - pyinstaller -w --onefile src/main.py
 deploy:
   provider: releases
-  api_key: "$oauthtoken"
-  file: "C:\Users\travis\build\tisako\AILol\dist\main.exe"
+  api_key: "${oauthtoken}"
+  file: "*/main.exe"
   skip_cleanup: true
   on:
     tags: true
